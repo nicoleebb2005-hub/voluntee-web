@@ -1,0 +1,20 @@
+services:
+  voluntee-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: voluntee-dev
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      # Monta a pasta public para hot reload completo
+      - ./public:/app/public
+      # Monta node_modules como volume nomeado para persistência
+      - node_modules:/app/node_modules
+    restart: unless-stopped
+
+volumes:
+  node_modules:
+

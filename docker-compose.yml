@@ -1,0 +1,15 @@
+services:
+  voluntee:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: voluntee
+    ports:
+      - "8080:80"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      # Monta a pasta public como volume para atualizações em tempo real
+      - ./public:/usr/share/nginx/html
+    restart: unless-stopped
+

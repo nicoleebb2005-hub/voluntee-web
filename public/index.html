@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Voluntee - Conectando pessoas dispostas a ajudar com organizações sociais em São Mateus, Zona Leste de São Paulo">
+    <title>Voluntee - Conectando Vontades e Necessidades</title>
+    
+    <!-- Favicon - Logo do Voluntee -->
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="apple-touch-icon" href="assets/images/Logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header com Glassmorphism -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <!-- Logo -->
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/Logo.png" alt="Voluntee Logo" class="logo">
+                </a>
+                
+                <!-- Menu Desktop -->
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="ongs.html" class="nav-link">ONGs Parceiras</a></li>
+                    <li><a href="historia.html" class="nav-link">História do Bairro</a></li>
+                </ul>
+                
+                <!-- Campo de Pesquisa com Botão Doe Agora -->
+                <div class="search-container">
+                    <a href="#" class="donate-link">Doe Agora</a>
+                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput">
+                    <button class="search-btn" aria-label="Pesquisar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Menu Hambúrguer (Mobile) -->
+                <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <img src="assets/images/Banner_Home.png" alt="Banner Principal" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Conectando <span class="highlight">Vontades</span> e <span class="highlight">Necessidades</span>
+                </h1>
+                <p class="hero-subtitle">
+                    A força de um bairro começa com os moradores
+                </p>
+                <div class="hero-cta">
+                    <a href="sobre.html" class="btn btn-primary">Conheça o Projeto</a>
+                    <a href="ongs.html" class="btn btn-secondary">Ver ONGs Parceiras</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator"></div>
+        </div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-circle" data-percent="85">
+                        <svg class="stat-svg" viewBox="0 0 180 180">
+                            <circle class="stat-circle-bg" cx="90" cy="90" r="70"></circle>
+                            <circle class="stat-circle-progress" cx="90" cy="90" r="70"></circle>
+                        </svg>
+                        <div class="stat-value">85%</div>
+                    </div>
+                    <h3 class="stat-title">Impacto Positivo</h3>
+                    <p class="stat-description">Famílias beneficiadas</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-circle" data-percent="100">
+                        <svg class="stat-svg" viewBox="0 0 180 180">
+                            <circle class="stat-circle-bg" cx="90" cy="90" r="70"></circle>
+                            <circle class="stat-circle-progress" cx="90" cy="90" r="70"></circle>
+                        </svg>
+                        <div class="stat-value">120+</div>
+                    </div>
+                    <h3 class="stat-title">Voluntários</h3>
+                    <p class="stat-description">Pessoas engajadas</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-circle" data-percent="75">
+                        <svg class="stat-svg" viewBox="0 0 180 180">
+                            <circle class="stat-circle-bg" cx="90" cy="90" r="70"></circle>
+                            <circle class="stat-circle-progress" cx="90" cy="90" r="70"></circle>
+                        </svg>
+                        <div class="stat-value">15</div>
+                    </div>
+                    <h3 class="stat-title">Projetos Ativos</h3>
+                    <p class="stat-description">Iniciativas em andamento</p>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-circle" data-percent="100">
+                        <svg class="stat-svg" viewBox="0 0 180 180">
+                            <circle class="stat-circle-bg" cx="90" cy="90" r="70"></circle>
+                            <circle class="stat-circle-progress" cx="90" cy="90" r="70"></circle>
+                        </svg>
+                        <div class="stat-value">3</div>
+                    </div>
+                    <h3 class="stat-title">ONGs Parceiras</h3>
+                    <p class="stat-description">Organizações colaboradoras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrossel de Imagens -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="carousel-wrapper">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide active">
+                            <img src="assets/images/carrosel01.jpg" alt="Ações do Voluntee" class="carousel-image">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/carrosel02.jpg" alt="Ações do Voluntee" class="carousel-image">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/carrosel03.jpg" alt="Ações do Voluntee" class="carousel-image">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/images/carrosel04.jpg" alt="Ações do Voluntee" class="carousel-image">
+                            <div class="carousel-overlay"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Botões de Navegação -->
+                    <button class="carousel-btn carousel-btn-prev" aria-label="Imagem anterior">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" aria-label="Próxima imagem">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button class="carousel-indicator active" data-slide="0" aria-label="Slide 1"></button>
+                        <button class="carousel-indicator" data-slide="1" aria-label="Slide 2"></button>
+                        <button class="carousel-indicator" data-slide="2" aria-label="Slide 3"></button>
+                        <button class="carousel-indicator" data-slide="3" aria-label="Slide 4"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards de Serviços -->
+    <section class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossas Causas</h2>
+                <p class="section-subtitle">Trabalhamos em diferentes frentes para transformar vidas</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="service-image-container">
+                        <img src="assets/images/Redução das desigualdades.jpg" alt="Redução das Desigualdades" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Redução das Desigualdades</h3>
+                        <p class="service-description">
+                            Trabalhamos para reduzir as desigualdades sociais e promover equidade, garantindo que todas as pessoas tenham acesso a oportunidades e recursos necessários para uma vida digna.
+                        </p>
+                        <a href="sobre.html#desigualdades" class="service-link">
+                            Saiba mais
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card glass-card">
+                    <div class="service-image-container">
+                        <img src="assets/images/Assistencia Basicas.jpg" alt="Assistência Básica" class="service-image">
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Assistência Básica</h3>
+                        <p class="service-description">
+                            Conectamos voluntários com organizações que oferecem assistência básica às famílias do bairro, garantindo apoio essencial para o bem-estar da comunidade.
+                        </p>
+                        <a href="sobre.html#assistencia" class="service-link">
+                            Saiba mais
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content glass-card">
+                <h2 class="cta-title">Pronto para fazer a diferença?</h2>
+                <p class="cta-description">
+                    Junte-se à nossa rede de voluntários e transforme vidas em São Mateus
+                </p>
+                <div class="cta-buttons">
+                    <a href="ongs.html" class="btn btn-primary btn-large">Quero Ajudar</a>
+                    <a href="sobre.html" class="btn btn-outline btn-large">Saber Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo_rodape.png" alt="Voluntee Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navegação</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="ongs.html">ONGs Parceiras</a></li>
+                            <li><a href="historia.html">História do Bairro</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Projeto</h4>
+                        <ul class="footer-list">
+                            <li><a href="sobre.html#moradia">Moradia Digna</a></li>
+                            <li><a href="sobre.html#assistencia">Assistência Básica</a></li>
+                            <li><a href="sobre.html#transformacao">Transformação Social</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Informações</h4>
+                        <ul class="footer-list">
+                            <li>São Mateus, Zona Leste</li>
+                            <li>São Paulo, SP</li>
+                            <li>Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 Voluntee. Todos os direitos reservados.
+                </p>
+                <p class="footer-ods">
+                    Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, 
+                    Redução das Desigualdades e Cidades Sustentáveis
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

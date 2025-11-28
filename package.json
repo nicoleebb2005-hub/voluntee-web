@@ -1,0 +1,21 @@
+{
+  "name": "voluntee",
+  "version": "1.0.0",
+  "description": "Site institucional do projeto Voluntee",
+  "scripts": {
+    "dev": "live-server --port=8080 --host=0.0.0.0 --open=/index.html --watch=.",
+    "start": "live-server --port=8080 --host=0.0.0.0 --open=/index.html"
+  },
+  "keywords": [
+    "voluntee",
+    "voluntariado",
+    "são mateus"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
+
+

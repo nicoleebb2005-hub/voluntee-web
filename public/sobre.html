@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sobre o projeto Voluntee - Conectando pessoas e organizações sociais">
+    <title>Sobre - Voluntee</title>
+    
+    <!-- Favicon - Logo do Voluntee -->
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="apple-touch-icon" href="assets/images/Logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/Logo.png" alt="Voluntee Logo" class="logo">
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link active">Sobre</a></li>
+                    <li><a href="ongs.html" class="nav-link">ONGs Parceiras</a></li>
+                    <li><a href="historia.html" class="nav-link">História do Bairro</a></li>
+                </ul>
+                
+                <!-- Campo de Pesquisa com Botão Doe Agora -->
+                <div class="search-container">
+                    <a href="#" class="donate-link">Doe Agora</a>
+                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput">
+                    <button class="search-btn" aria-label="Pesquisar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Sobre o Voluntee</h1>
+            <p class="page-subtitle">Conectando pessoas e organizações para transformar São Mateus</p>
+        </div>
+    </section>
+
+    <!-- Sobre Content -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content glass-card">
+                <div class="about-text">
+                    <h2 class="about-title">Nossa Missão</h2>
+                    <p class="about-paragraph">
+                        A Voluntee existe para fortalecer o que há de mais poderoso em um território: as pessoas que vivem nele.
+                    </p>
+                    <p class="about-paragraph">
+                        Nossa missão é conectar moradores, organizações sociais e voluntários em uma rede colaborativa que transforma realidades de forma concreta e afetiva. Atuamos como ponte entre quem quer ajudar e quem precisa de apoio, facilitando o acesso a causas sociais urgentes — como a moradia digna, assistência básica e redução das desigualdades — com foco inicial no bairro de São Mateus, na Zona Leste de São Paulo.
+                    </p>
+                    <p class="about-paragraph">
+                        Acreditamos que o impacto começa de dentro para fora, quando a comunidade se reconhece como protagonista de sua própria história. Por isso, criamos uma plataforma digital acessível, empática e representativa, que valoriza a identidade local e dá visibilidade a iniciativas que já fazem a diferença no território.
+                    </p>
+                    <p class="about-paragraph">
+                        Unimos tecnologia e sensibilidade social para facilitar a ação voluntária, aproximar afetos e gerar transformações reais. Nossa missão é fazer com que cada gesto de solidariedade encontre um destino certo.
+                    </p>
+                    <p class="about-paragraph">
+                        Porque mais do que uma plataforma, a Voluntee é um convite: a acreditar na força de um bairro que começa com os próprios moradores.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causas -->
+    <section class="causes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossas Causas</h2>
+                <p class="section-subtitle">Frentes de atuação do projeto</p>
+            </div>
+
+            <div class="causes-grid">
+                <div class="cause-card glass-card" id="assistencia">
+                    <div class="cause-icon">
+                        <img src="assets/images/Assistencia Basicas.jpg" alt="Assistência Básica" class="cause-icon-image">
+                    </div>
+                    <h3 class="cause-title">Assistência Básica</h3>
+                    <p class="cause-description">
+                        Trabalhamos para garantir que nenhuma família de São Mateus enfrente a vulnerabilidade sozinha. A Voluntee conecta voluntários com organizações que atuam na linha de frente oferecendo apoio essencial às famílias, como alimentos, roupas, materiais escolares, produtos de higiene e cuidados psicossociais.
+                    </p>
+                    <p class="cause-description">
+                        Nossa ação busca atender necessidades imediatas com acolhimento e dignidade, fortalecendo os vínculos entre quem pode doar e quem precisa receber.
+                    </p>
+                    <ul class="cause-list">
+                        <li>Distribuição de cestas básicas e refeições</li>
+                        <li>Doação de roupas, calçados e kits escolares</li>
+                        <li>Apoio psicológico e escuta ativa</li>
+                    </ul>
+                </div>
+
+                <div class="cause-card glass-card" id="desigualdades">
+                    <div class="cause-icon">
+                        <img src="assets/images/Redução das desigualdades.jpg" alt="Redução das Desigualdades" class="cause-icon-image">
+                    </div>
+                    <h3 class="cause-title">Redução das Desigualdades</h3>
+                    <p class="cause-description">
+                        Acreditamos que a transformação social começa onde as desigualdades são mais visíveis. Atuamos em territórios onde o acesso a direitos ainda é limitado, promovendo iniciativas que ampliam oportunidades, promovem inclusão e valorizam a potência das periferias.
+                    </p>
+                    <p class="cause-description">
+                        Por meio da plataforma, facilitamos o encontro entre pessoas dispostas a transformar realidades e comunidades que lutam todos os dias por uma vida mais justa.
+                    </p>
+                    <ul class="cause-list">
+                        <li>Ações afirmativas e inclusão social</li>
+                        <li>Apoio a iniciativas locais que enfrentam desigualdades</li>
+                        <li>Valorização da identidade periférica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Valores</h2>
+                <p class="section-subtitle">Princípios que guiam nosso trabalho</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-number">01</div>
+                    <h3 class="value-title">Solidariedade</h3>
+                    <p class="value-description">Acreditamos no poder da ajuda mútua e da colaboração</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">02</div>
+                    <h3 class="value-title">Transparência</h3>
+                    <p class="value-description">Trabalhamos com honestidade e clareza em todas as ações</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">03</div>
+                    <h3 class="value-title">Impacto Local</h3>
+                    <p class="value-description">Focamos em transformações reais na nossa comunidade</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-number">04</div>
+                    <h3 class="value-title">Sustentabilidade</h3>
+                    <p class="value-description">Buscamos soluções duradouras e sustentáveis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo_rodape.png" alt="Voluntee Logo" class="footer-logo">
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Navegação</h4>
+                        <ul class="footer-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                            <li><a href="ongs.html">ONGs Parceiras</a></li>
+                            <li><a href="historia.html">História do Bairro</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Projeto</h4>
+                        <ul class="footer-list">
+                            <li><a href="sobre.html#assistencia">Assistência Básica</a></li>
+                            <li><a href="sobre.html#desigualdades">Redução das Desigualdades</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 class="footer-title">Informações</h4>
+                        <ul class="footer-list">
+                            <li>São Mateus, Zona Leste</li>
+                            <li>São Paulo, SP</li>
+                            <li>Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; 2024 Voluntee. Todos os direitos reservados.
+                </p>
+                <p class="footer-ods">
+                    Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, 
+                    Redução das Desigualdades e Cidades Sustentáveis
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

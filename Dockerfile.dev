@@ -1,0 +1,19 @@
+# Dockerfile para desenvolvimento com hot reload
+FROM node:18-alpine
+
+# Instalar live-server globalmente
+RUN npm install -g live-server
+
+# Criar diretório de trabalho
+WORKDIR /app
+
+# Copiar package.json e instalar dependências (se necessário)
+COPY package.json ./
+RUN npm install
+
+# Expor a porta do live-server
+EXPOSE 8080
+
+# Comando para iniciar o live-server com hot reload
+CMD ["live-server", "--port=8080", "--host=0.0.0.0", "--open=/index.html", "--watch=public", "public"]
+

@@ -1,0 +1,44 @@
+# Dependências
+node_modules/
+package-lock.json
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos temporários
+*.tmp
+*.temp
+.cache/
+
+# Build e deploy
+dist/
+build/
+.next/
+out/
+
+# Variáveis de ambiente
+.env
+.env.local
+.env*.local
+
+# Docker
+.docker/
+
+# Documentação de desenvolvimento (manter apenas docs/)
+!docs/README.md
