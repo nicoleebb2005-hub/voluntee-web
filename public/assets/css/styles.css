@@ -990,7 +990,7 @@ body {
 }
 
 .service-image-container {
-    width: 100%;
+    width: 40%;
     border-radius: 18px;
     overflow: hidden;
     margin-bottom: var(--space-lg);
@@ -999,6 +999,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 30%;
 }
 
 .service-image {
@@ -1029,6 +1030,7 @@ body {
     margin-bottom: var(--space-lg);
     line-height: 1.8;
     font-size: 1.05rem;
+    text-align: center;
 }
 
 .service-link {
@@ -1039,6 +1041,7 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: gap 0.3s;
+    text-align: center;
 }
 
 .service-link:hover {
