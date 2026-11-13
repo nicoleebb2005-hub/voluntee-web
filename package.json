@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Site institucional do projeto Voluntee",
   "scripts": {
-    "dev": "live-server --port=8080 --host=0.0.0.0 --open=/index.html --watch=.",
-    "start": "live-server --port=8080 --host=0.0.0.0 --open=/index.html"
+    "dev": "live-server public --port=8082 --host=127.0.0.1 --no-browser --watch=public",
+    "start": "live-server public --port=8082 --host=127.0.0.1 --no-browser"
   },
   "keywords": [
     "voluntee",

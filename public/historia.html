@@ -13,7 +13,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -21,38 +21,33 @@
     <!-- Header -->
     <header class="header" id="header">
         <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/Logo.png" alt="Voluntee Logo" class="logo">
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="index.html" class="logo-link" aria-label="Voluntee, página inicial">
+                    <img src="assets/images/Logo.png" alt="Voluntee" class="logo">
                 </a>
-                
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu" id="menuToggle">
+                    <span></span><span></span><span></span>
+                </button>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="sobre.html" class="nav-link">Sobre</a></li>
-                    <li><a href="ongs.html" class="nav-link">ONGs Parceiras</a></li>
-                    <li><a href="historia.html" class="nav-link active">História do Bairro</a></li>
+                    <li><a href="ongs.html" class="nav-link">Iniciativas</a></li>
+                    <li><a href="acoes.html" class="nav-link">Ações e campanhas</a></li>
+                    <li><a href="historia.html" class="nav-link active" aria-current="page">História do Bairro</a></li>
+                    <li class="nav-help-item"><a href="ongs.html" class="donate-link">Como ajudar</a></li>
                 </ul>
-                
-                <!-- Campo de Pesquisa com Botão Doe Agora -->
-                <div class="search-container">
-                    <a href="#" class="donate-link">Doe Agora</a>
-                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput">
-                    <button class="search-btn" aria-label="Pesquisar">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
+                <form class="search-container" role="search" action="busca.html" method="get">
+                    <label class="sr-only" for="searchInput">Pesquisar iniciativas e campanhas</label>
+                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput" name="q">
+                    <button class="search-btn" type="submit" aria-label="Pesquisar">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
                     </button>
-                </div>
-                
-                <button class="menu-toggle" aria-label="Menu" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                </form>
             </nav>
         </div>
     </header>
+
+    <main>
 
     <!-- Banner -->
     <section class="hero-historia">
@@ -104,24 +99,24 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content glass-card">
-                        <div class="timeline-year">Década de 1970</div>
+                        <div class="timeline-year">01 · Formação</div>
                         <h3 class="timeline-title">Formação do Bairro</h3>
                         <p class="timeline-description">
                             Início das ocupações e loteamentos que deram origem ao bairro de São Mateus.
                         </p>
                     </div>
                     <div class="timeline-image-container">
-                        <img src="assets/images/1970.jpg" alt="Década de 1970" class="timeline-image">
+                        <img src="assets/images/1970.jpg" alt="Registro histórico da formação de São Mateus" class="timeline-image">
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-image-container">
-                        <img src="assets/images/1980.jpg" alt="Década de 1980" class="timeline-image">
+                        <img src="assets/images/1980.jpg" alt="Registro da organização comunitária em São Mateus" class="timeline-image">
                     </div>
                     <div class="timeline-content glass-card">
-                        <div class="timeline-year">Década de 1980</div>
+                        <div class="timeline-year">02 · Organização</div>
                         <h3 class="timeline-title">Organização Comunitária</h3>
                         <p class="timeline-description">
                             Surgimento das primeiras organizações comunitárias e movimentos populares.
@@ -132,24 +127,24 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content glass-card">
-                        <div class="timeline-year">Década de 1990</div>
+                        <div class="timeline-year">03 · Mobilização</div>
                         <h3 class="timeline-title">Luta por Direitos</h3>
                         <p class="timeline-description">
                             Mobilizações por melhorias em infraestrutura, educação e saúde pública.
                         </p>
                     </div>
                     <div class="timeline-image-container">
-                        <img src="assets/images/1990.jpg" alt="Década de 1990" class="timeline-image">
+                        <img src="assets/images/1990.jpg" alt="Registro da mobilização por direitos em São Mateus" class="timeline-image">
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-image-container">
-                        <img src="assets/images/2000.jpg" alt="Anos 2000" class="timeline-image">
+                        <img src="assets/images/2000.jpg" alt="Registro de organizações e projetos sociais do bairro" class="timeline-image">
                     </div>
                     <div class="timeline-content glass-card">
-                        <div class="timeline-year">Anos 2000</div>
+                        <div class="timeline-year">04 · Consolidação</div>
                         <h3 class="timeline-title">Consolidação</h3>
                         <p class="timeline-description">
                             Consolidação de organizações e projetos sociais no bairro.
@@ -167,7 +162,7 @@
                         </p>
                     </div>
                     <div class="timeline-image-container">
-                        <img src="assets/images/hoje.jpg" alt="Hoje" class="timeline-image">
+                        <img src="assets/images/hoje.jpg" alt="Registro atual do bairro" class="timeline-image">
                     </div>
                 </div>
             </div>
@@ -222,52 +217,23 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/images/logo_rodape.png" alt="Voluntee Logo" class="footer-logo">
-                </div>
-                
+                <div class="footer-brand"><img src="assets/images/logo_rodape.png" alt="Voluntee" class="footer-logo"></div>
                 <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-title">Navegação</h4>
-                        <ul class="footer-list">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="sobre.html">Sobre</a></li>
-                            <li><a href="ongs.html">ONGs Parceiras</a></li>
-                            <li><a href="historia.html">História do Bairro</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Projeto</h4>
-                        <ul class="footer-list">
-                            <li><a href="sobre.html#assistencia">Assistência Básica</a></li>
-                            <li><a href="sobre.html#desigualdades">Redução das Desigualdades</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4 class="footer-title">Informações</h4>
-                        <ul class="footer-list">
-                            <li>São Mateus, Zona Leste</li>
-                            <li>São Paulo, SP</li>
-                            <li>Brasil</li>
-                        </ul>
-                    </div>
+                    <div class="footer-column"><h4 class="footer-title">Navegação</h4><ul class="footer-list">
+                        <li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="ongs.html">Iniciativas</a></li><li><a href="acoes.html">Ações e campanhas</a></li><li><a href="historia.html">História do Bairro</a></li><li><a href="ongs.html">Como ajudar</a></li>
+                    </ul></div>
+                    <div class="footer-column"><h4 class="footer-title">Projeto</h4><ul class="footer-list">
+                        <li><a href="sobre.html#assistencia">Assistência Básica</a></li><li><a href="sobre.html#desigualdades">Redução das Desigualdades</a></li>
+                    </ul></div>
+                    <div class="footer-column"><h4 class="footer-title">Informações</h4><ul class="footer-list"><li>São Mateus, Zona Leste</li><li>São Paulo, SP</li><li>Brasil</li></ul></div>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    &copy; 2024 Voluntee. Todos os direitos reservados.
-                </p>
-                <p class="footer-ods">
-                    Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, 
-                    Redução das Desigualdades e Cidades Sustentáveis
-                </p>
-            </div>
+            <div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Voluntee. Todos os direitos reservados.</p><p class="footer-ods">Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, Redução das Desigualdades e Cidades Sustentáveis</p></div>
         </div>
     </footer>
 

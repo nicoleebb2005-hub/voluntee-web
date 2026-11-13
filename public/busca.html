@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Busque iniciativas e campanhas de São Mateus apresentadas pelo Voluntee.">
+    <title>Busca - Voluntee</title>
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/campaign-search.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="index.html" class="logo-link" aria-label="Voluntee, página inicial"><img src="assets/images/Logo.png" alt="Voluntee" class="logo"></a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu" id="menuToggle"><span></span><span></span><span></span></button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="ongs.html" class="nav-link">Iniciativas</a></li>
+                    <li><a href="acoes.html" class="nav-link">Ações e campanhas</a></li>
+                    <li><a href="historia.html" class="nav-link">História do Bairro</a></li>
+                    <li class="nav-help-item"><a href="ongs.html" class="donate-link">Como ajudar</a></li>
+                </ul>
+                <form class="search-container" role="search" action="busca.html" method="get">
+                    <label class="sr-only" for="searchInput">Pesquisar iniciativas e campanhas</label>
+                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput" name="q">
+                    <button class="search-btn" type="submit" aria-label="Pesquisar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero campaign-page-hero">
+            <div class="container">
+                <h1 class="page-title">Resultados da busca</h1>
+                <p class="page-subtitle" id="search-summary">Iniciativas e campanhas de São Mateus</p>
+            </div>
+        </section>
+        <section class="search-results-section section-pad surface-white">
+            <div class="container">
+                <div class="search-results-grid" id="searchResults" aria-live="polite"></div>
+                <div class="search-prompt-state" id="searchPrompt" aria-live="polite">
+                    <h2>O que você procura?</h2>
+                    <p>Digite um nome, tipo de iniciativa, causa ou palavra da descrição no campo de busca acima.</p>
+                    <a class="btn btn-primary" href="ongs.html">Ver todas as iniciativas</a>
+                </div>
+                <div class="search-no-results" id="searchNoResults" hidden>
+                    <p>Nenhuma iniciativa encontrada para esse termo.</p>
+                    <a class="btn btn-primary" href="ongs.html">Ver todas as iniciativas</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand"><a href="index.html" aria-label="Voluntee, página inicial"><img src="assets/images/logo_rodape.png" alt="Voluntee" class="footer-logo"></a></div>
+                <div class="footer-links">
+                    <div class="footer-column"><h2 class="footer-title">Navegação</h2><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="ongs.html">Iniciativas</a></li><li><a href="acoes.html">Ações e campanhas</a></li><li><a href="historia.html">História do Bairro</a></li><li><a href="ongs.html">Como ajudar</a></li></ul></div>
+                    <div class="footer-column"><h2 class="footer-title">Projeto</h2><ul class="footer-list"><li><a href="sobre.html#assistencia">Assistência Básica</a></li><li><a href="sobre.html#desigualdades">Redução das Desigualdades</a></li></ul></div>
+                    <div class="footer-column"><h2 class="footer-title">Informações</h2><ul class="footer-list"><li>São Mateus, Zona Leste</li><li>São Paulo, SP</li><li>Brasil</li></ul></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Voluntee. Todos os direitos reservados.</p><p class="footer-ods">Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, Redução das Desigualdades e Cidades Sustentáveis</p></div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="dados.js"></script>
+    <script src="assets/js/campaign-search.js"></script>
+</body>
+</html>

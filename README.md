@@ -1,93 +1,33 @@
-# 🎯 Voluntee - Site Institucional
+# Voluntee
 
-> Conectando pessoas dispostas a ajudar com organizações sociais em São Mateus, Zona Leste de São Paulo.
+Site estático que apresenta iniciativas sociais e campanhas de São Mateus, em São Paulo. O Voluntee organiza informações para que as pessoas conheçam as iniciativas e entrem em contato diretamente com elas. Não recebe doações nem cadastra voluntários.
 
-## 🚀 Iniciar Rapidamente
-
-### Modo Desenvolvimento (Com Hot Reload) - RECOMENDADO
+## Desenvolvimento
 
 ```bash
-.\start-dev-background.bat
+npm install
+npm run dev
 ```
 
-Abra: **http://localhost:8080**
+Abra `http://127.0.0.1:8082`. O servidor observa os arquivos de `public/` e atualiza a página ao salvá-los.
 
-As mudanças nos arquivos em `public/` serão refletidas automaticamente! 🔥
-
-### Parar o Container
+Também há uma configuração de desenvolvimento com Docker:
 
 ```bash
-.\stop-all.bat
+docker compose -f docker-compose.dev.yml up --build
 ```
 
-## ⚠️ IMPORTANTE
+Nesse caso, a porta padrão é `8080`. A configuração de produção usa Nginx e está em `Dockerfile`, `config/nginx.conf` e `render.yaml`.
 
-**Edite apenas os arquivos dentro da pasta `public/`**
+## Estrutura
 
-```
-✅ CORRETO:
-   public/index.html
-   public/assets/css/styles.css
-   public/assets/js/script.js
+- `public/index.html`: apresentação e explicação de como funciona.
+- `public/sobre.html`: missão, causas e valores.
+- `public/ongs.html`: listagem de iniciativas.
+- `public/iniciativa-*.html`: páginas individuais, com campanhas, informações e contato.
+- `public/acoes.html`: ações e campanhas com filtros.
+- `public/busca.html` e `public/dados.js`: busca e dados compartilhados.
+- `public/historia.html`: história do bairro.
+- `public/assets/css/` e `public/assets/js/`: estilos e interações em JavaScript puro.
 
-❌ ERRADO:
-   index.html (na raiz)
-   css/styles.css (na raiz)
-```
-
-## 📚 Documentação Completa
-
-- **[LEIA-ME-PRIMEIRO.md](./LEIA-ME-PRIMEIRO.md)** - Guia rápido e solução de problemas
-- **[docs/README.md](./docs/README.md)** - Documentação técnica completa
-- **[docs/ESTRUTURA.md](./docs/ESTRUTURA.md)** - Estrutura do projeto
-
-## 🛠️ Scripts Disponíveis
-
-| Script | O que faz |
-|--------|-----------|
-| `start-dev-background.bat` | Inicia desenvolvimento com hot reload em background |
-| `start-dev.bat` | Inicia desenvolvimento com logs visíveis |
-| `start-prod.bat` | Inicia em modo produção (Nginx) |
-| `stop-all.bat` | Para todos os containers |
-
-## 🎨 Tecnologias
-
-- HTML5, CSS3, JavaScript
-- Docker & Docker Compose
-- Nginx (produção)
-- Live Server (desenvolvimento)
-
-## 📦 Estrutura
-
-```
-Voluntee/
-├── public/              ← Edite aqui!
-│   ├── index.html
-│   ├── sobre.html
-│   ├── ongs.html
-│   ├── historia.html
-│   └── assets/
-│       ├── css/
-│       ├── js/
-│       └── images/
-├── config/
-├── docs/
-└── [scripts .bat]
-```
-
-## 🔧 Requisitos
-
-- Docker Desktop instalado e rodando
-- Windows PowerShell ou CMD
-
-## 💡 Workflow Recomendado
-
-1. **Inicie**: `.\start-dev-background.bat`
-2. **Desenvolva**: Edite arquivos em `public/`
-3. **Veja**: Mudanças aparecem automaticamente no navegador
-4. **Finalize**: `.\stop-all.bat`
-
----
-
-**Dúvidas?** Veja [LEIA-ME-PRIMEIRO.md](./LEIA-ME-PRIMEIRO.md)
-
+Campos `[PREENCHER]` dependem de dados e autorização das iniciativas. Atualize também `public/dados.js` quando completar informações que apareçam na busca ou nas campanhas.

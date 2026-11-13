@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ações e campanhas informadas por iniciativas sociais de São Mateus.">
+    <title>Ações e campanhas - Voluntee</title>
+    <link rel="icon" type="image/png" href="assets/images/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/campaign-search.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav" aria-label="Navegação principal">
+                <a href="index.html" class="logo-link" aria-label="Voluntee, página inicial"><img src="assets/images/Logo.png" alt="Voluntee" class="logo"></a>
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu" id="menuToggle"><span></span><span></span><span></span></button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="sobre.html" class="nav-link">Sobre</a></li>
+                    <li><a href="ongs.html" class="nav-link">Iniciativas</a></li>
+                    <li><a href="acoes.html" class="nav-link active" aria-current="page">Ações e campanhas</a></li>
+                    <li><a href="historia.html" class="nav-link">História do Bairro</a></li>
+                    <li class="nav-help-item"><a href="ongs.html" class="donate-link">Como ajudar</a></li>
+                </ul>
+                <form class="search-container" role="search" action="busca.html" method="get">
+                    <label class="sr-only" for="searchInput">Pesquisar iniciativas e campanhas</label>
+                    <input type="search" placeholder="Pesquisar..." class="search-input" id="searchInput" name="q">
+                    <button class="search-btn" type="submit" aria-label="Pesquisar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg></button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero campaign-page-hero">
+            <div class="container">
+                <h1 class="page-title">Ações e campanhas</h1>
+                <p class="page-subtitle">Veja o que as iniciativas de São Mateus precisam agora.</p>
+            </div>
+        </section>
+
+        <section class="campaign-list-section section-pad surface-white" aria-labelledby="campaign-list-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" id="campaign-list-title">Exemplos de campanhas</h2>
+                    <p class="campaign-page-note">Os cartões de exemplo aguardam informações confirmadas pelas iniciativas e não representam campanhas ativas.</p>
+                </div>
+                <div class="campaign-filters" id="campaignFilters" role="group" aria-label="Filtrar campanhas por tipo">
+                    <button class="campaign-filter is-active" type="button" data-filter="all" aria-pressed="true">Todas</button>
+                    <button class="campaign-filter" type="button" data-filter="Alimentos" aria-pressed="false">Alimentos</button>
+                    <button class="campaign-filter" type="button" data-filter="Roupas e objetos" aria-pressed="false">Roupas e objetos</button>
+                    <button class="campaign-filter" type="button" data-filter="Materiais" aria-pressed="false">Materiais</button>
+                    <button class="campaign-filter" type="button" data-filter="Voluntariado" aria-pressed="false">Voluntariado</button>
+                    <button class="campaign-filter" type="button" data-filter="Eventos" aria-pressed="false">Eventos</button>
+                </div>
+                <div class="campaign-grid" id="campaignGrid" aria-live="polite"></div>
+                <div class="campaign-empty-state" id="campaignEmpty" aria-live="polite" hidden>
+                    <span class="campaign-empty-icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none"><rect x="7" y="11" width="34" height="30" rx="5" stroke="currentColor" stroke-width="2.5"/><path d="M15 7v8M33 7v8M7 20h34M16 28h5M27 28h5M16 34h5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+                    </span>
+                    <p class="campaign-empty-eyebrow">Campanhas</p>
+                    <h3>Nenhuma campanha confirmada no momento</h3>
+                    <p>As campanhas aparecerão aqui quando as iniciativas compartilharem informações confirmadas.</p>
+                    <a class="btn btn-primary" href="ongs.html">Conhecer iniciativas</a>
+                </div>
+                <p class="campaign-disclaimer">As campanhas são informadas pelas próprias iniciativas. Novidades também são publicadas nos canais oficiais de cada uma.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand"><a href="index.html" aria-label="Voluntee, página inicial"><img src="assets/images/logo_rodape.png" alt="Voluntee" class="footer-logo"></a></div>
+                <div class="footer-links">
+                    <div class="footer-column"><h2 class="footer-title">Navegação</h2><ul class="footer-list"><li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li><li><a href="ongs.html">Iniciativas</a></li><li><a href="acoes.html">Ações e campanhas</a></li><li><a href="historia.html">História do Bairro</a></li><li><a href="ongs.html">Como ajudar</a></li></ul></div>
+                    <div class="footer-column"><h2 class="footer-title">Projeto</h2><ul class="footer-list"><li><a href="sobre.html#assistencia">Assistência Básica</a></li><li><a href="sobre.html#desigualdades">Redução das Desigualdades</a></li></ul></div>
+                    <div class="footer-column"><h2 class="footer-title">Informações</h2><ul class="footer-list"><li>São Mateus, Zona Leste</li><li>São Paulo, SP</li><li>Brasil</li></ul></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><p class="footer-copyright">&copy; 2026 Voluntee. Todos os direitos reservados.</p><p class="footer-ods">Contribuindo para os ODS: Erradicação da Pobreza, Educação de Qualidade, Redução das Desigualdades e Cidades Sustentáveis</p></div>
+        </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+    <script src="dados.js"></script>
+    <script src="assets/js/campaign-search.js"></script>
+</body>
+</html>
