@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: voluntee
     ports:
-      - "8080:80"
+      - "${VOLUNTEE_PORT:-8080}:80"
     environment:
       - NODE_ENV=production
     volumes:

@@ -1,0 +1,20 @@
+# Classes CSS removidas
+
+189 classes antigas foram removidas dos três arquivos CSS. A lista considera classes únicas no conjunto dos arquivos; classes apenas movidas entre arquivos não entram.
+
+- `.about-boundaries`, `.about-content`, `.about-paragraph`, `.about-section`, `.about-text`, `.about-title`, `.boundary-card`, `.btn-large`, `.btn-secondary`, `.campaign-card-example`, `.campaign-card__label`, `.campaign-cta`
+- `.campaign-detail`, `.campaign-disclaimer`, `.campaign-empty`, `.campaign-empty-eyebrow`, `.campaign-empty-icon`, `.campaign-empty-state`, `.campaign-example-label`, `.campaign-filter`, `.campaign-filters`, `.campaign-instagram`, `.campaign-list-section`, `.campaign-page-hero`
+- `.campaign-page-note`, `.campaign-type`, `.cause-description`, `.cause-icon`, `.cause-icon-image`, `.cause-list`, `.cause-title`, `.causes-grid`, `.causes-section`, `.cta-buttons`, `.cta-content`, `.cta-description`
+- `.cta-section`, `.cta-title`, `.donate-link`, `.feature-card`, `.feature-description`, `.feature-icon`, `.feature-title`, `.features-grid`, `.features-section`, `.footer`, `.footer-content`, `.footer-copyright`
+- `.footer-links`, `.footer-list`, `.footer-logo`, `.footer-ods`, `.footer-title`, `.gallery-item`, `.gallery-label`, `.glass-card`, `.header`, `.help-card`, `.help-card__icon`, `.help-grid`
+- `.hero`, `.hero-background`, `.hero-background-historia`, `.hero-cta`, `.hero-eyebrow`, `.hero-historia`, `.hero-image`, `.hero-image-historia`, `.hero-overlay`, `.hero-overlay-historia`, `.hero-scroll`, `.hero-subtitle`
+- `.hero-title`, `.highlight`, `.history-content`, `.history-paragraph`, `.history-section`, `.history-title`, `.home-initiative-card`, `.home-initiative-logo`, `.home-initiative-logo--missing`, `.initiative-back`, `.initiative-card-content`, `.initiative-contact`
+- `.initiative-contact__actions`, `.initiative-contact__empty`, `.initiative-contact__layout`, `.initiative-contact__map-note`, `.initiative-copy`, `.initiative-cta`, `.initiative-detail`, `.initiative-empty-state`, `.initiative-empty-state__eyebrow`, `.initiative-fact`, `.initiative-facts`, `.initiative-gallery`
+- `.initiative-help-state`, `.initiative-info-panel`, `.initiative-location`, `.initiative-map`, `.initiative-map-frame`, `.initiative-map-placeholder`, `.initiative-profile`, `.initiative-profile__copy`, `.initiative-profile__logo`, `.initiative-profile__logo--placeholder`, `.initiative-profile__logo-frame`, `.initiative-profile__main`
+- `.initiative-section`, `.initiative-section--beige`, `.initiative-section--white`, `.initiative-section__heading`, `.initiative-tag`, `.initiative-tags`, `.initiative-type`, `.initiative-verified`, `.lightbox`, `.lightbox-open`, `.lightbox__caption`, `.lightbox__close`
+- `.lightbox__image`, `.lightbox__panel`, `.logo`, `.logo-link`, `.logo-placeholder`, `.menu-toggle`, `.nav`, `.nav-help-item`, `.nav-link`, `.nav-menu`, `.ong-actions`, `.ong-card`
+- `.ong-description`, `.ong-header`, `.ong-image`, `.ong-image-container`, `.ong-name`, `.ong-tag`, `.ongs-grid`, `.ongs-section`, `.page-subtitle`, `.page-title`, `.related-card`, `.related-card__placeholder`
+- `.related-initiatives`, `.search-btn`, `.search-container`, `.search-input`, `.search-no-results`, `.search-prompt-state`, `.search-query-label`, `.search-result-card`, `.search-result-causes`, `.search-result-description`, `.search-result-example`, `.search-result-initiative`
+- `.search-result-type`, `.search-results-grid`, `.search-results-header`, `.search-results-section`, `.section-header`, `.section-subtitle`, `.section-title`, `.service-card`, `.service-description`, `.service-image`, `.service-image-container`, `.service-link`
+- `.service-title`, `.services-grid`, `.services-section`, `.step-card`, `.surface-beige`, `.surface-white`, `.timeline-content`, `.timeline-description`, `.timeline-image`, `.timeline-image-container`, `.timeline-item`, `.timeline-marker`
+- `.timeline-section`, `.timeline-title`, `.timeline-year`, `.value-description`, `.value-item`, `.value-number`, `.value-title`, `.values-grid`, `.values-section`

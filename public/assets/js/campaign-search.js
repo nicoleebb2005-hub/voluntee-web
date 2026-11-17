@@ -1,109 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const data = window.VOLUNTEE_DATA || { initiatives: [], campaigns: [] };
-    const normalize = (value) => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
-    const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
-        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-    })[character]);
-
-    const campaignGrid = document.getElementById('campaignGrid');
-    if (campaignGrid) {
-        const emptyState = document.getElementById('campaignEmpty');
-        const filters = document.getElementById('campaignFilters');
-        const emptyTitle = emptyState.querySelector('h3');
-        const emptyMessage = emptyState.querySelector(':scope > p:not(.campaign-empty-eyebrow)');
-        const filterButtons = document.querySelectorAll('.campaign-filter');
-
-        const renderCampaigns = (filter) => {
-            const filtered = filter === 'all'
-                ? data.campaigns
-                : data.campaigns.filter((campaign) => normalize(campaign.type) === normalize(filter));
-
-            campaignGrid.innerHTML = filtered.map((campaign) => `
-                <a class="campaign-card${campaign.example ? ' campaign-card-example' : ''}" href="${escapeHtml(campaign.link)}">
-                    ${campaign.example ? '<span class="campaign-example-label">Exemplo · não confirmado</span>' : ''}
-                    <span class="campaign-type">${escapeHtml(campaign.type)}</span>
-                    <h2>${escapeHtml(campaign.title)}</h2>
-                    <p class="campaign-detail"><strong>Descrição</strong>${escapeHtml(campaign.description)}</p>
-                    <p class="campaign-detail"><strong>Prazo</strong>${escapeHtml(campaign.deadline)}</p>
-                    <p class="campaign-detail"><strong>Iniciativa responsável</strong>${escapeHtml(campaign.initiative)}</p>
-                    <span class="campaign-cta">Ver iniciativa e como ajudar</span>
-                </a>
-            `).join('');
-
-            const hasResults = filtered.length > 0;
-            campaignGrid.hidden = !hasResults;
-            emptyState.hidden = hasResults;
-            if (!hasResults) {
-                emptyTitle.textContent = filter === 'all' ? 'Nenhuma campanha confirmada no momento' : `Nenhum exemplo para “${filter}”`;
-                emptyMessage.textContent = filter === 'all'
-                    ? 'Os exemplos ainda aguardam informações das iniciativas e não representam campanhas ativas.'
-                    : 'O tipo das campanhas ainda precisa ser confirmado. Quando houver dados para esta categoria, eles aparecerão aqui.';
-            }
-        };
-
-        filterButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                filterButtons.forEach((item) => {
-                    const active = item === button;
-                    item.classList.toggle('is-active', active);
-                    item.setAttribute('aria-pressed', String(active));
-                });
-                renderCampaigns(button.dataset.filter);
-            });
-        });
-        filters.hidden = false;
-        renderCampaigns('all');
+(() => {
+  const {data,normalize,escapeHtml,matches} = window.Voluntee;
+  const campaigns = data.filter(item => item.tipo === 'Campanha');
+  const filters = document.getElementById('campaignFilters');
+  const grid = document.getElementById('campaignGrid');
+  if (filters && grid) {
+    const categories = [...new Set(campaigns.map(item => item.categoria))];
+    filters.innerHTML = ['Todas',...categories].map((category,index) => `<button type="button" data-category="${index ? escapeHtml(category) : ''}" aria-pressed="${!index}">${escapeHtml(category)}</button>`).join('');
+    function render(category = '') {
+      const items = campaigns.filter(item => !category || item.categoria === category);
+      grid.innerHTML = items.map(item => `<a class="campaign-card clickable-card" href="${escapeHtml(item.link)}"><span class="card-tags"><span class="tag">${escapeHtml(item.categoria)}</span>${item.permanente ? '<span class="tag">Campanha permanente</span>' : ''}</span><h3>${escapeHtml(item.titulo)}</h3><p>${escapeHtml(item.descricao)}</p><p><strong>Iniciativa:</strong> ${escapeHtml(item.iniciativa)}</p><span class="card-action">Ver iniciativa e como ajudar <b aria-hidden="true">→</b></span></a>`).join('');
+      grid.classList.add('is-ready');
+      document.getElementById('campaignCount').textContent = `${items.length} ${items.length === 1 ? 'campanha' : 'campanhas'}`;
+      filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
     }
-
-    const results = document.getElementById('searchResults');
-    if (!results) return;
-
-    const params = new URLSearchParams(window.location.search);
-    const query = (params.get('q') || '').trim();
-    const term = normalize(query);
-    const summary = document.getElementById('search-summary');
-    const noResults = document.getElementById('searchNoResults');
-    const searchPrompt = document.getElementById('searchPrompt');
-    const searchInput = document.getElementById('searchInput');
-    if (searchInput && query) searchInput.value = query;
-    if (summary) summary.textContent = query ? `Resultados para “${query}”` : 'Iniciativas e campanhas de São Mateus';
-    if (searchPrompt) searchPrompt.hidden = Boolean(query);
-
-    const fieldsText = (values) => values.flat(Infinity).map((value) => String(value ?? '')).join(' ');
-    const initiativeResults = data.initiatives
-        .filter((item) => normalize(fieldsText([item.name, item.type, item.causes || [], item.summary])).includes(term))
-        .map((item) => ({
-            title: item.name || '[PREENCHER]',
-            type: `Iniciativa · ${item.type || '[PREENCHER]'}`,
-            causes: (item.causes || []).join(', ') || '[PREENCHER]',
-            description: item.summary || '[PREENCHER]',
-            link: item.link,
-            example: false
-        }));
-    const campaignResults = data.campaigns
-        .filter((item) => normalize(fieldsText([item.title, item.type, item.causes || [], item.initiative, item.description])).includes(term))
-        .map((item) => ({
-            title: item.title || '[PREENCHER]',
-            type: `Campanha · ${item.type || '[PREENCHER]'}`,
-            causes: (item.causes || []).join(', ') || '[PREENCHER]',
-            description: item.description || '[PREENCHER]',
-            initiative: item.initiative,
-            link: item.link,
-            example: item.example === true
-        }));
-    const matches = query ? [...initiativeResults, ...campaignResults] : [];
-
-    results.classList.toggle('is-single', matches.length === 1);
-    results.innerHTML = matches.map((result) => `
-        <a class="search-result-card${result.example ? ' search-result-example' : ''}" href="${escapeHtml(result.link)}">
-            ${result.example ? '<span class="campaign-example-label">Exemplo · não confirmado</span>' : ''}
-            <span class="search-result-type">${escapeHtml(result.type)}</span>
-            <h2>${escapeHtml(result.title)}</h2>
-            <p class="search-result-description">${escapeHtml(result.description)}</p>
-            <p class="search-result-causes"><strong>Causas:</strong> ${escapeHtml(result.causes)}</p>
-            ${result.initiative ? `<p class="search-result-initiative"><strong>Iniciativa:</strong> ${escapeHtml(result.initiative)}</p>` : ''}
-        </a>
-    `).join('');
-    noResults.hidden = !query || matches.length > 0;
-    if (noResults) noResults.setAttribute('aria-live', 'polite');
-});
+    filters.addEventListener('click', event => { const button=event.target.closest('button[data-category]'); if (button) render(button.dataset.category); });
+    render();
+  }
+  const results = document.getElementById('searchResults');
+  if (!results) return;
+  const query = (new URLSearchParams(location.search).get('q') || '').trim();
+  document.querySelectorAll('.search-form input[name="q"]').forEach(input => input.value = query);
+  const title = document.querySelector('.page-hero h1');
+  title.textContent = query ? `Resultados para “${query}”` : 'Resultados da busca';
+  const count = document.getElementById('searchCount');
+  const empty = document.getElementById('searchEmpty');
+  const emptyText = document.getElementById('searchEmptyText');
+  function mark(value) {
+    const words = normalize(query).split(/\s+/).filter(Boolean);
+    if (!words.length) return escapeHtml(value);
+    const text = String(value || '');
+    const normalized = normalize(text);
+    let spans=[];
+    words.forEach(word => { let start=0,index; while ((index=normalized.indexOf(word,start))!==-1) { spans.push([index,index+word.length]); start=index+word.length; } });
+    spans.sort((a,b)=>a[0]-b[0]);
+    let out='',pos=0;
+    spans.forEach(([a,b])=>{ if(a<pos)return; out+=escapeHtml(text.slice(pos,a))+`<strong>${escapeHtml(text.slice(a,b))}</strong>`;pos=b; });
+    return out+escapeHtml(text.slice(pos));
+  }
+  if (!query) { count.textContent=''; return; }
+  const found = data.filter(item => matches(item,query));
+  count.textContent = `${found.length} ${found.length === 1 ? 'resultado' : 'resultados'}`;
+  if (found.length) document.querySelector('.search-fallback').hidden = true;
+  for (const type of ['Iniciativa','Campanha']) {
+    const items=found.filter(item=>item.tipo===type);
+    if(!items.length)continue;
+    const section=document.createElement('section');
+    section.className='search-group';
+    section.innerHTML=`<h3>${type === 'Iniciativa' ? 'Iniciativas' : 'Ações e campanhas'}</h3><div class="result-grid">${items.map(item=>{
+      const visible = normalize(item.titulo + ' ' + item.descricao);
+      const missing = normalize(query).split(/\s+/).filter(word => word && !visible.includes(word));
+      const context = [item.causa,item.bairro,...String(item.palavrasChave || '').split(',')].filter(value => missing.some(word => normalize(value).includes(word))).slice(0,3);
+      return `<a class="result-card clickable-card" href="${escapeHtml(item.link)}"><span class="tag">${item.tipo}</span><h4>${mark(item.titulo)}</h4><p>${mark(item.descricao)}</p>${context.length ? `<p>Relacionado a: ${mark(context.join(' · '))}</p>` : ''}<span class="card-action">Ver mais <b aria-hidden="true">→</b></span></a>`;
+    }).join('')}</div>`;
+    results.append(section);
+  }
+  if (!found.length) { empty.hidden=false; emptyText.textContent=`Nenhum resultado para '${query}'. Tente outras palavras, como alimentos, roupas, oficinas ou voluntariado.`; }
+})();
