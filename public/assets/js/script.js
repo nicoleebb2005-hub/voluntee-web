@@ -7,9 +7,7 @@
   window.Voluntee = { data, normalize, escapeHtml, matches };
 
   function initiativeCard(item) {
-    const logo = item.logo === 'jr'
-      ? '<span class="jr-logo" role="img" aria-label="Paróquia Jesus Ressuscitado"><strong>JR</strong><small>Paróquia Jesus Ressuscitado</small></span>'
-      : `<img src="${escapeHtml(item.logo)}" alt="Logotipo da ${escapeHtml(item.titulo)}" width="180" height="180" loading="lazy">`;
+    const logo = `<img src="${escapeHtml(item.logo)}" alt="${escapeHtml(item.logoAlt || 'Logotipo de ' + item.titulo)}" width="600" height="600" loading="lazy">`;
     return `<a class="initiative-card clickable-card" href="${escapeHtml(item.link)}"><span class="card-logo">${logo}</span><span class="card-body"><span class="tag">${escapeHtml(item.organizacao)}</span><h3>${escapeHtml(item.titulo)}</h3><p>${escapeHtml(item.descricao)}</p><span class="tag">${escapeHtml(item.causa)}</span><span class="card-action">Conhecer a iniciativa <b aria-hidden="true">→</b></span></span></a>`;
   }
   const filters = document.getElementById('initiativeFilters');

@@ -112,3 +112,4 @@
   .neighborhood-timeline__copy{padding:20px}
   .neighborhood-timeline__media,.neighborhood-timeline__item:nth-child(even) .neighborhood-timeline__media{height:190px}
 }
+.cause-card img.cause-icon{object-fit:contain;border-radius:0;background:transparent}

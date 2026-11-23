@@ -2,3 +2,54 @@
 .profile{position:relative;overflow:hidden;isolation:isolate}
 .profile::after{content:'';position:absolute;z-index:-1;width:440px;height:440px;right:-140px;top:-280px;border:1px solid rgba(255,255,255,.16);border-radius:50%;box-shadow:0 0 0 60px rgba(255,255,255,.03),0 0 0 120px rgba(255,255,255,.025)}
 .profile-logo img[src*="Sao_Mateus_em_movimento"]{transform:scale(1.5)}
+
+/* Fotos, destaques e ampliação (nov/2026) */
+.split{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.split .photo{max-width:560px;justify-self:end;width:100%}
+.split-reverse{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)}
+.split-reverse .photo{justify-self:start}
+.split h2{margin-bottom:24px}
+.photo{margin:0}
+.photo-open{position:relative;display:block;width:100%;padding:0;border:0;border-radius:16px;overflow:hidden;background:#F5EBDD;box-shadow:0 4px 20px rgba(44,62,80,.08);cursor:zoom-in}
+.photo-open img{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;transition:transform .2s ease-out}
+.photo-poster .photo-open img{aspect-ratio:auto;object-fit:contain;background:#FFFFFF}
+.photo-zoom{position:absolute;right:12px;bottom:12px;width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:#FFFFFF;color:#2C3E50;box-shadow:0 4px 20px rgba(44,62,80,.14);opacity:0;transition:opacity .2s ease-out}
+.photo-zoom svg{width:22px;height:22px}
+.photo figcaption{font-size:13px;margin-top:8px}
+.dark .photo figcaption{color:#F5EBDD}
+.photo-open:focus-visible .photo-zoom{opacity:1}
+@media(hover:hover) and (pointer:fine){.photo-open:hover img{transform:scale(1.03)}.photo-open:hover .photo-zoom{opacity:1}}
+.feature-card{display:grid;grid-template-columns:300px minmax(0,1fr);gap:0;margin-top:32px;border-radius:16px;overflow:hidden;background:#FFFFFF;box-shadow:0 4px 20px rgba(44,62,80,.08);border:1px solid rgba(44,62,80,.1);border-top:3px solid #C1440E}
+.feature-media{background:#FFFFFF;padding:16px}
+.feature-media .photo-open{box-shadow:none;border-radius:12px}
+.feature-media figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.feature-body{padding:32px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+.feature-body h3,.feature-body p{margin:0}
+.tags-inline{display:flex;flex-wrap:wrap;gap:8px}
+.workshop-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.workshop-list strong{font-family:Quicksand,sans-serif}
+.feature-body .btn{margin-top:8px}
+.feature-card+.info-grid{margin-top:24px}
+.info-grid-single{grid-template-columns:minmax(0,560px)!important}
+.gallery{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:16px}
+.gallery .photo-open img{aspect-ratio:auto;height:340px}
+.profile-photo{background:#2C3E50}
+.profile-bg{position:absolute;inset:0;z-index:-2}
+.profile-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.profile-photo::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(44,62,80,.92) 0%,rgba(44,62,80,.65) 55%,rgba(44,62,80,.25) 100%)}
+.profile-photo::after{display:none}
+.profile-photo{padding-block:96px}
+.profile-logo img[src*="logo-paroquia"],.profile-logo img[src*="smem-logo"]{padding:16px}
+.photo-modal{position:fixed;inset:0;z-index:300;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(44,62,80,.9)}
+.photo-modal.open{display:flex}
+.photo-modal figure{margin:0;max-width:min(1100px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center}
+.photo-modal img{max-width:100%;max-height:calc(100vh - 140px);border-radius:12px;background:#FFFFFF;object-fit:contain}
+.photo-modal figcaption{color:#F5EBDD;margin-top:12px;text-align:center}
+.photo-modal-close{position:absolute;top:16px;right:16px;width:48px;height:48px;border:0;border-radius:50%;background:#F5EBDD;color:#2C3E50;font-size:28px;line-height:1}
+.photo-modal-close:focus-visible{outline:3px solid #F5EBDD;outline-offset:3px}
+body.modal-is-open{overflow:hidden}
+@media(max-width:1024px){.feature-card{grid-template-columns:240px minmax(0,1fr)}.gallery{grid-template-columns:1fr 1fr}.gallery .photo:first-child{grid-column:1/-1}}
+@media(max-width:600px){.split,.split-reverse{grid-template-columns:1fr;gap:24px}.split .photo,.split-reverse .photo{justify-self:stretch;max-width:none}.split-reverse .photo{order:-1}.feature-card{grid-template-columns:1fr}.feature-body{padding:24px}.gallery{grid-template-columns:1fr}.gallery .photo-open img{height:260px}.profile-photo{padding-block:56px}.profile-photo::before{background:rgba(44,62,80,.8)}.info-grid-single{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){.photo-open img,.photo-zoom{transition:none}.photo-open:hover img{transform:none}}
+.beige .facts>div{background:#FFFFFF;box-shadow:0 4px 20px rgba(44,62,80,.08)}
+.split .photo-poster{max-width:440px}
