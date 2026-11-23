@@ -1,0 +1,144 @@
+
+/* ===== Prévia: identidade urbana de São Mateus ===== */
+.section-pad,.profile,.page-hero,.home-hero,.site-footer{position:relative}
+/* divisões orgânicas: borda rasgada de papel/muro no topo das seções */
+main>section+section::before,.site-footer::before{content:'';position:absolute;left:0;right:0;top:-25px;height:26px;background:inherit;-webkit-mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%2026%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C26%20L0%2C12%20L0%2C9.2%20L22.223776869886052%2C14.4%20L42.25199289657725%2C12.6%20L70.49128257012964%2C4.9%20L102.69948309943341%2C4.6%20L132.84156224198023%2C5.1%20L153.38152661560844%2C10.8%20L194.5333861064255%2C6.0%20L218.7840771154219%2C14.0%20L263.3199275042181%2C13.2%20L292.42698079443994%2C19.6%20L311.7312958517371%2C17.7%20L337.84035586902405%2C6.3%20L359.13853853521834%2C8.9%20L399.99007659057924%2C6.9%20L434.2748811731283%2C14.2%20L462.70201236944877%2C12.8%20L482.46010366870183%2C5.0%20L506.22694762764297%2C14.9%20L536.1995321863863%2C9.0%20L570.5952643646001%2C11.3%20L596.9887402767832%2C16.7%20L634.5605844212113%2C7.9%20L668.644448308454%2C12.4%20L711.14829818451%2C15.7%20L737.2105556014353%2C19.7%20L758.5163973925743%2C10.7%20L797.7163434204012%2C6.4%20L829.4073102337238%2C4.6%20L866.1173542166869%2C16.2%20L900.1620805444536%2C18.0%20L926.9470109042003%2C15.1%20L961.5893674631408%2C13.3%20L992.3631167395804%2C17.4%20L1036.8141874026026%2C11.6%20L1073.4104491558935%2C5.0%20L1111.0522257524174%2C14.4%20L1156.8589120574832%2C17.2%20L1182.8275869561194%2C10.2%20L1200%2C10%20L1200%2C26%20Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center/100% 100% no-repeat;mask:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%2026%22%20preserveAspectRatio%3D%22none%22%3E%3Cpath%20d%3D%22M0%2C26%20L0%2C12%20L0%2C9.2%20L22.223776869886052%2C14.4%20L42.25199289657725%2C12.6%20L70.49128257012964%2C4.9%20L102.69948309943341%2C4.6%20L132.84156224198023%2C5.1%20L153.38152661560844%2C10.8%20L194.5333861064255%2C6.0%20L218.7840771154219%2C14.0%20L263.3199275042181%2C13.2%20L292.42698079443994%2C19.6%20L311.7312958517371%2C17.7%20L337.84035586902405%2C6.3%20L359.13853853521834%2C8.9%20L399.99007659057924%2C6.9%20L434.2748811731283%2C14.2%20L462.70201236944877%2C12.8%20L482.46010366870183%2C5.0%20L506.22694762764297%2C14.9%20L536.1995321863863%2C9.0%20L570.5952643646001%2C11.3%20L596.9887402767832%2C16.7%20L634.5605844212113%2C7.9%20L668.644448308454%2C12.4%20L711.14829818451%2C15.7%20L737.2105556014353%2C19.7%20L758.5163973925743%2C10.7%20L797.7163434204012%2C6.4%20L829.4073102337238%2C4.6%20L866.1173542166869%2C16.2%20L900.1620805444536%2C18.0%20L926.9470109042003%2C15.1%20L961.5893674631408%2C13.3%20L992.3631167395804%2C17.4%20L1036.8141874026026%2C11.6%20L1073.4104491558935%2C5.0%20L1111.0522257524174%2C14.4%20L1156.8589120574832%2C17.2%20L1182.8275869561194%2C10.2%20L1200%2C10%20L1200%2C26%20Z%22%20fill%3D%22%23000%22/%3E%3C/svg%3E") center/100% 100% no-repeat;z-index:2;pointer-events:none}
+main>section+section{z-index:auto}
+/* textura de reboco no bege */
+.beige{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22220%22%20height%3D%22220%22%3E%3Cfilter%20id%3D%22n%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.9%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%20.17%20%200%200%200%200%20.24%20%200%200%200%200%20.31%20%200%200%200%20.07%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22220%22%20height%3D%22220%22%20filter%3D%22url%28%23n%29%22/%3E%3C/svg%3E")}
+/* traçado de ruas no azul */
+.dark,.profile,.page-hero,.site-footer{background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%201200%20800%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%20fill%3D%22none%22%20stroke%3D%22%23FFFFFF%22%20stroke-opacity%3D%22.07%22%20stroke-width%3D%222%22%3E%3Cpath%20d%3D%22M-20%20120%20C220%2080%20420%20210%20700%20170%20S1040%2070%201220%20110%22/%3E%3Cpath%20d%3D%22M-20%20520%20C200%20480%20380%20600%20620%20560%20S960%20400%201220%20470%22/%3E%3Cpath%20d%3D%22M160%20-20%20C200%20180%20120%20360%20220%20520%20S280%20720%20240%20820%22/%3E%3Cpath%20d%3D%22M600%20-20%20C560%20140%20660%20320%20600%20500%20S520%20700%20580%20820%22/%3E%3Cpath%20d%3D%22M960%20-20%20C1000%20200%20900%20380%20960%20600%20S1040%20760%201000%20820%22/%3E%3Cpath%20d%3D%22M-20%20330%20L1220%20300%22%20stroke-width%3D%226%22/%3E%3Cpath%20d%3D%22M400%20-20%20L480%20820%22%20stroke-width%3D%226%22/%3E%3Cpath%20d%3D%22M820%20-20%20C800%20300%20860%20500%20790%20820%22%20stroke-width%3D%223%22/%3E%3Ccircle%20cx%3D%22470%22%20cy%3D%22310%22%20r%3D%226%22%20fill%3D%22%23C1440E%22%20fill-opacity%3D%22.4%22%20stroke%3D%22none%22/%3E%3Ccircle%20cx%3D%22960%22%20cy%3D%22480%22%20r%3D%226%22%20fill%3D%22%23C1440E%22%20fill-opacity%3D%22.4%22%20stroke%3D%22none%22/%3E%3Ccircle%20cx%3D%22215%22%20cy%3D%22545%22%20r%3D%226%22%20fill%3D%22%23C1440E%22%20fill-opacity%3D%22.4%22%20stroke%3D%22none%22/%3E%3C/svg%3E");background-size:cover;background-repeat:no-repeat;background-position:center}
+.profile-photo{background-image:none}
+.page-hero .container::after{display:none}
+.section-kicker{letter-spacing:.2em}
+/* fotos como lambe-lambe: leve inclinação e fita */
+.split .photo{position:relative;transform:rotate(-1.4deg)}
+.split-reverse .photo{transform:rotate(1.2deg)}
+.split .photo::before{content:'';position:absolute;z-index:3;top:-12px;left:50%;width:96px;height:26px;transform:translateX(-50%) rotate(-3deg);background:rgba(245,235,221,.88);box-shadow:0 1px 3px rgba(44,62,80,.15)}
+.split .photo-open{border-radius:4px;box-shadow:0 10px 30px rgba(44,62,80,.18)}
+.split .photo figcaption{font-style:italic}
+.gallery .photo:nth-child(1){transform:rotate(-1deg)}.gallery .photo:nth-child(2){transform:rotate(1.2deg) translateY(14px)}.gallery .photo:nth-child(3){transform:rotate(-.8deg)}
+.gallery .photo-open{border-radius:4px}
+/* localização com pin */
+.profile-inner>div>p:not(.profile-type)::before{content:'';display:inline-block;width:18px;height:18px;margin-right:6px;vertical-align:-3px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%2022s7-6.3%207-12a7%207%200%201%200-14%200c0%205.7%207%2012%207%2012Z%22%20fill%3D%22%23C1440E%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2210%22%20r%3D%222.6%22%20fill%3D%22%23F5EBDD%22/%3E%3C/svg%3E") center/contain no-repeat}
+/* cartões menos "caixa": cantos irregulares */
+.info-card,.activity-card,.feature-card,.clickable-card,.facts>div{border-radius:18px 8px 16px 10px}
+.info-card,.activity-card,.feature-card{border-top-width:4px}
+/* linha do tempo com anos grandes */
+.timeline strong{font-size:1.9rem}
+@media(prefers-reduced-motion:reduce){.split .photo,.gallery .photo{transform:none}}
+@media(max-width:600px){.split .photo,.split-reverse .photo{transform:rotate(-.8deg)}.gallery .photo{transform:none!important}main>section+section::before{top:-15px;height:16px}}
+
+/* ===== Elementos do bairro ===== */
+/* placa de rua de São Paulo */
+.section-kicker{display:inline-block;background:#2C3E50;color:#FFFFFF!important;padding:6px 14px;border-radius:4px;border:2px solid #FFFFFF;box-shadow:0 0 0 2px #2C3E50;font-size:.75rem;letter-spacing:.14em}
+.dark .section-kicker,.page-hero .section-kicker{background:#F5EBDD;color:#2C3E50!important;border-color:#2C3E50;box-shadow:0 0 0 2px #F5EBDD}
+.street-sign{display:inline-block;background:#2C3E50;color:#FFFFFF;font:700 .9rem/1.2 'Work Sans',sans-serif;letter-spacing:.06em;padding:8px 16px;border-radius:4px;border:2px solid #FFFFFF;box-shadow:0 0 0 2px #2C3E50,0 4px 12px rgba(0,0,0,.15);margin-bottom:16px}
+.page-hero .street-sign{background:#F5EBDD;color:#2C3E50;border-color:#2C3E50;box-shadow:0 0 0 2px #F5EBDD}
+.street-sign--small{font-size:.72rem;padding:4px 10px;margin-bottom:10px}
+/* faixa de mutirão */
+.neighborhood-strip{background:#C1440E;color:#FFFFFF;overflow:hidden;transform:rotate(-1.2deg) scale(1.02);margin:-8px 0;position:relative;z-index:3;box-shadow:0 6px 20px rgba(44,62,80,.2)}
+.neighborhood-strip__track{display:flex;gap:40px;white-space:nowrap;padding:14px 24px;font:700 1rem Quicksand,sans-serif;width:max-content;animation:strip 40s linear infinite}
+.neighborhood-strip__track span::after{content:'✦';margin-left:40px;color:#F5EBDD}
+@keyframes strip{to{transform:translateX(-50%)}}
+.neighborhood-strip:hover .neighborhood-strip__track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.neighborhood-strip__track{animation:none;flex-wrap:wrap;white-space:normal;width:auto}}
+.neighborhood-strip+section::before{display:none}
+/* silhueta do bairro antes do rodapé */
+.skyline{height:90px;margin-top:-1px;background:url('../images/silhueta-sao-mateus.svg') bottom/100% 100% no-repeat}
+.skyline+.site-footer::before{display:none}
+main>section:last-child{padding-bottom:110px}
+/* história */
+.timeline-year{display:block;font:700 2.4rem/1 Quicksand,sans-serif;color:#C1440E;margin:4px 0 6px}
+.neighborhood-timeline__copy h3{margin-top:0}
+.neighborhood-timeline__media{position:relative;transform:rotate(-1deg);border-radius:4px}
+.neighborhood-timeline__item:nth-child(even) .neighborhood-timeline__media{transform:rotate(1deg)}
+.neighborhood-timeline__media figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 8px;font-size:12px;color:#FFFFFF;background:linear-gradient(transparent,rgba(44,62,80,.85))}
+.split-text{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:48px;align-items:center}
+.origin-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:12px}
+.origin-list li{background:#F5EBDD;border-radius:999px;padding:10px 18px;border:2px dashed rgba(193,68,14,.45)}
+.number-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.number-grid div{border-left:3px solid #C1440E;padding-left:16px}
+.number-grid strong{display:block;font:700 2.4rem/1.1 Quicksand,sans-serif;color:#FFFFFF}
+.number-grid span{color:#F5EBDD}
+.sources{font-size:.875rem;max-width:none;margin:0}
+@media(max-width:900px){.number-grid{grid-template-columns:1fr 1fr}.split-text{grid-template-columns:1fr}}
+@media(max-width:600px){.timeline-year{font-size:1.9rem}.skyline{height:56px}.neighborhood-timeline__media{transform:none!important}}
+html{overflow-x:clip}body{overflow-x:clip}
+.page-hero.history-hero{background:linear-gradient(rgba(44,62,80,.8),rgba(44,62,80,.8)),url('../images/Banner2.webp') center/cover #2C3E50}
+
+/* ===== Alinhamento padronizado ===== */
+.section-pad h2{margin:0 0 16px}
+.section-kicker{margin:0 0 14px}
+.section-intro,.section-pad h2+.reading,.section-pad h2+p{margin-top:0}
+.section-intro{margin-bottom:32px}
+.section-pad h2+.info-grid,.section-pad h2+.facts,.section-pad h2+.gallery,.section-pad h2+.timeline,.section-pad h2+.activity-grid{margin-top:24px}
+.split,.split-reverse,.split-text{align-items:center}
+.split>div>h2:first-child,.split>div>.section-kicker:first-child{margin-top:0}
+.split .reading,.split .timeline{margin-bottom:0}
+.split .photo-tall{max-width:360px}
+.split .photo-open img{max-height:440px}
+.page-hero h1,.profile h1{margin-bottom:12px}
+.info-card h3,.activity-body h3,.feature-body h3{margin:0 0 8px}
+@media(max-width:600px){.profile-inner{text-align:left}.profile-logo{margin:0}.tags{justify-content:flex-start}}
+
+/* ===== Mapa / logo ===== */
+.map-story__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:56px;align-items:center}
+.map-story__text .reading{margin:0 0 16px}
+.map-story__hint{font-size:.9rem;opacity:.85}
+.map-steps{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.map-steps li{display:flex;align-items:center;gap:8px;min-height:44px;padding:6px 16px 6px 6px;border-radius:999px;border:1px solid rgba(255,255,255,.25);color:#F5EBDD;cursor:pointer;transition:background .3s,color .3s}
+.map-steps li span{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.12);font-weight:700}
+.map-steps li.active{background:#F5EBDD;color:#2C3E50}
+.map-steps li.active span{background:#C1440E;color:#FFFFFF}
+.map-story__figure{position:relative;margin:0}
+.map-svg{display:block;width:100%;height:auto;overflow:visible}
+.map-base{fill:rgba(255,255,255,.06)}
+.district path{fill:#F5EBDD;fill-opacity:.9;stroke:#2C3E50;stroke-width:3;transition:fill .25s,fill-opacity .6s}
+.district:nth-of-type(2) path{fill:#EAD8C2}.district:nth-of-type(3) path{fill:#E0CAAF}
+.district text{font:700 15px 'Work Sans',sans-serif;fill:#2C3E50;pointer-events:none;transition:opacity .4s}
+.district{cursor:pointer;outline:none}
+.district:hover path,.district:focus-visible path{fill:#FFFFFF}
+.district:focus-visible path{stroke:#C1440E}
+.map-outline{fill:none;stroke:#C1440E;stroke-width:6;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.8s ease-in-out}
+.map-story__logo{position:absolute;right:-8px;bottom:6%;width:46%;background:#FFFFFF;border-radius:16px 6px 14px 8px;padding:6px 10px;box-shadow:0 14px 34px rgba(0,0,0,.3);transform:rotate(-3deg);transition:opacity .6s,transform .6s}
+.map-story__logo img{display:block;width:100%;height:auto}
+.map-story figcaption{font-size:12px;color:#F5EBDD;opacity:.8;margin-top:12px}
+.map-story[data-step="0"] .district path{fill-opacity:0}
+.map-story[data-step="0"] .district text{opacity:0}
+.map-story[data-step="0"] .map-outline,.map-story[data-step="1"] .map-outline{stroke-dashoffset:1}
+.map-story[data-step="2"] .district path{fill-opacity:.25}
+.map-story[data-step="0"] .map-story__logo,.map-story[data-step="1"] .map-story__logo,.map-story[data-step="2"] .map-story__logo{opacity:0;transform:rotate(-3deg) translateY(16px)}
+@media(max-width:900px){.map-story__grid{grid-template-columns:1fr;gap:32px}.map-story__logo{width:52%;right:0}}
+@media(prefers-reduced-motion:reduce){.map-outline,.district path,.map-story__logo{transition:none}}
+.map-story__figure{padding-bottom:70px}
+.map-story__logo{width:38%;right:-6px;bottom:0;padding:14px 18px}
+.map-story figcaption{margin-top:0;max-width:58%}
+@media(max-width:600px){.map-story__figure{padding-bottom:60px}.map-story__logo{width:50%}.map-story figcaption{max-width:45%}}
+/* padrão único: texto à esquerda, foto à direita, topo alinhado */
+.split,.split-reverse{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:64px;align-items:start!important}
+.split-reverse>.photo{order:2;justify-self:end!important}
+.split-reverse>div{order:1}
+.split .photo{justify-self:end;width:100%;max-width:460px}
+.split .photo-tall{max-width:380px}
+.split>div{padding-top:8px}
+@media(max-width:600px){.split,.split-reverse{grid-template-columns:1fr!important;gap:28px}.split-reverse>.photo{order:2}.split .photo,.split .photo-tall{max-width:none;justify-self:stretch!important}.split>div{padding-top:0}}
+
+/* ===== Só o que é clicável parece clicável ===== */
+/* etiquetas viram rótulos de texto, sem formato de botão */
+.tag{display:inline-flex;align-items:center;gap:6px;padding:0;background:none!important;border:0!important;border-radius:0;color:inherit;font-size:.8125rem;font-weight:600;letter-spacing:.02em;line-height:1.4;cursor:default}
+.tag::before{content:'';width:7px;height:7px;flex:none;background:#C1440E;transform:rotate(45deg)}
+.dark .tag,.profile .tag{color:#F5EBDD}
+.dark .tag::before,.profile .tag::before{background:#F5EBDD}
+.tags,.tags-inline{gap:6px 18px}
+.card-body .tag,.activity-body .tag,.feature-body .tag,.info-card .tag{color:#2C3E50}
+/* texto de abertura do topo sem caixa */
+.eyebrow{background:none!important;border:0!important;padding:0!important;border-radius:0!important}
+/* regiões de origem: lista simples */
+.origin-list{gap:10px 24px}
+.origin-list li{background:none;border:0;border-radius:0;padding:0 0 0 22px;position:relative}
+.origin-list li::before{content:'';position:absolute;left:0;top:50%;width:14px;height:14px;transform:translateY(-50%);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Z' fill='%23C1440E'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%23F5EBDD'/%3E%3C/svg%3E") center/contain no-repeat}
+/* placa de rua: sem sombra de botão */
+.section-kicker,.street-sign{cursor:default;box-shadow:none}
+/* cartões e blocos que não são links nunca reagem ao mouse */
+.info-card,.facts>div,.dark-card,.activity-card,.feature-card,.number-grid div{cursor:default}
