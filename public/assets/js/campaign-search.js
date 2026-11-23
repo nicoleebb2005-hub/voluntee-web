@@ -1,6 +1,6 @@
 (() => {
   const {data,normalize,escapeHtml,matches} = window.Voluntee;
-  const campaigns = data.filter(item => item.tipo === 'Campanha');
+  const campaigns = data.filter(item => item.tipo !== 'Iniciativa');
   const filters = document.getElementById('campaignFilters');
   const grid = document.getElementById('campaignGrid');
   if (filters && grid) {
@@ -10,7 +10,7 @@
       const items = campaigns.filter(item => !category || item.categoria === category);
       grid.innerHTML = items.map(item => `<a class="campaign-card clickable-card" href="${escapeHtml(item.link)}"><span class="card-tags"><span class="tag">${escapeHtml(item.categoria)}</span>${item.permanente ? '<span class="tag">Campanha permanente</span>' : ''}</span><h3>${escapeHtml(item.titulo)}</h3><p>${escapeHtml(item.descricao)}</p><p><strong>Iniciativa:</strong> ${escapeHtml(item.iniciativa)}</p><span class="card-action">Ver iniciativa e como ajudar <b aria-hidden="true">→</b></span></a>`).join('');
       grid.classList.add('is-ready');
-      document.getElementById('campaignCount').textContent = `${items.length} ${items.length === 1 ? 'campanha' : 'campanhas'}`;
+      document.getElementById('campaignCount').textContent = `${items.length} ${items.length === 1 ? 'resultado' : 'resultados'}`;
       filters.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.category === category)));
     }
     filters.addEventListener('click', event => { const button=event.target.closest('button[data-category]'); if (button) render(button.dataset.category); });
@@ -42,7 +42,7 @@
   count.textContent = `${found.length} ${found.length === 1 ? 'resultado' : 'resultados'}`;
   if (found.length) document.querySelector('.search-fallback').hidden = true;
   for (const type of ['Iniciativa','Campanha']) {
-    const items=found.filter(item=>item.tipo===type);
+    const items=found.filter(item=>type==='Iniciativa'?item.tipo==='Iniciativa':item.tipo!=='Iniciativa');
     if(!items.length)continue;
     const section=document.createElement('section');
     section.className='search-group';

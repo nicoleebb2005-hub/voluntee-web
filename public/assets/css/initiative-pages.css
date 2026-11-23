@@ -53,3 +53,25 @@ body.modal-is-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.photo-open img,.photo-zoom{transition:none}.photo-open:hover img{transform:none}}
 .beige .facts>div{background:#FFFFFF;box-shadow:0 4px 20px rgba(44,62,80,.08)}
 .split .photo-poster{max-width:440px}
+#atividades .info-grid+.section-intro,#precisa-agora .info-grid+.section-intro{margin-top:24px}
+.split .photo-tall{max-width:400px}
+.split .photo-tall .photo-open img{aspect-ratio:3/4}
+.split .timeline{max-width:none}
+.card-mini-logo{width:72px;height:72px;border-radius:50%;margin-bottom:12px;display:block}
+.info-card .card-photo{margin:-24px -24px 16px}
+.info-card .card-photo .photo-open{border-radius:14px 14px 0 0;box-shadow:none}
+.info-card .card-photo .photo-open img{aspect-ratio:auto;height:240px;object-fit:contain;background:#FFFFFF}
+.info-card .card-photo figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.gallery .photo-tall .photo-open img{object-position:center 30%}
+@media(max-width:600px){.split .photo-tall{max-width:none}.split .photo-tall .photo-open img{aspect-ratio:4/5}}
+.activity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.activity-card{display:flex;flex-direction:column;background:#FFFFFF;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(44,62,80,.08);border:1px solid rgba(44,62,80,.1);border-top:3px solid #C1440E}
+.activity-card .photo{background:#FFFFFF;padding:16px 16px 0}
+.activity-card .photo-open{box-shadow:none;border-radius:12px}
+.activity-card .photo-open img{aspect-ratio:auto;height:340px;object-fit:contain;background:#FFFFFF}
+.activity-card figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.activity-body{flex:1;display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:24px}
+.activity-body h3,.activity-body p{margin:0}
+.activity-body .btn{margin-top:auto}
+.activity-note{margin-top:32px;margin-bottom:16px}
+@media(max-width:600px){.activity-grid{grid-template-columns:1fr}.activity-card .photo-open img{height:280px}}
