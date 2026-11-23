@@ -142,3 +142,29 @@ html{overflow-x:clip}body{overflow-x:clip}
 .section-kicker,.street-sign{cursor:default;box-shadow:none}
 /* cartões e blocos que não são links nunca reagem ao mouse */
 .info-card,.facts>div,.dark-card,.activity-card,.feature-card,.number-grid div{cursor:default}
+
+/* ===== Etiquetas com ícone ===== */
+.tag{gap:8px;font-size:.8125rem;font-weight:600}
+.tag::before{display:none}
+.tag-icon{width:24px;height:24px;flex:none;display:grid;place-items:center;border-radius:50%;background:#2C3E50;color:#FFFFFF}
+.tag-icon svg{width:14px;height:14px}
+.tag[data-icon="recycle"] .tag-icon,.tag[data-icon="gift"] .tag-icon,.tag[data-icon="calendar"] .tag-icon{background:#C1440E}
+.dark .tag-icon,.profile .tag-icon{background:#F5EBDD!important;color:#2C3E50}
+.tags,.tags-inline{gap:10px 20px}
+
+/* ===== Mais respiro nos cartões ===== */
+.info-grid,.activity-grid,.campaign-grid,.result-grid,.initiative-grid{gap:32px}
+.info-card{padding:32px 28px}
+.info-card .tag,.activity-body .tag,.feature-body .tag{margin-bottom:14px}
+.info-card h3{margin:0 0 12px;line-height:1.25}
+.info-card p{margin:0 0 14px;line-height:1.65}
+.info-card p:last-child{margin-bottom:0}
+.info-card .card-photo{margin:-32px -28px 24px}
+.info-card .card-photo .photo-open{border-radius:13px 13px 0 0}
+.info-card .card-photo-cover .photo-open img{object-fit:cover;height:240px}
+.activity-body,.feature-body{gap:14px;padding:28px}
+.card-body{gap:14px;padding:28px}
+#precisa-agora .info-grid{align-items:start}
+@media(max-width:600px){.info-card{padding:24px 20px}.info-card .card-photo{margin:-24px -20px 20px}.info-grid,.activity-grid{gap:24px}}
+.card-photo-cover .photo-open img[src*="oleo-reciclagem"]{object-position:40% 88%}
+.info-card .card-photo-cover .photo-open img{aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center}
