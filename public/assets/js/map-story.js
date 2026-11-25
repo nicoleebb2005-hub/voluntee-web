@@ -1,19 +1,32 @@
-// Anima o mapa de São Mateus quando a seção aparece na tela
+// Mostra, em três etapas, como o mapa de São Mateus virou o logo do Voluntee
 (() => {
   const story = document.querySelector('.map-story');
   if (!story) return;
-  const steps = story.querySelectorAll('.map-steps li');
+  const buttons = story.querySelectorAll('.map-steps button');
+  const caption = story.querySelector('.map-story__caption');
+  const texts = {
+    1: 'Os três distritos da região: São Mateus, São Rafael e Iguatemi.',
+    2: 'O limite da região vira uma linha laranja.',
+    3: 'Na parte de baixo, a linha se abre e forma o V do Voluntee.'
+  };
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const setStep = n => { story.dataset.step = n; steps.forEach((li, i) => li.classList.toggle('active', i < n)); };
+  let timers = [];
+  function setStep(n) {
+    story.dataset.step = n;
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.go) === n)));
+    caption.textContent = texts[n];
+  }
+  function play() {
+    timers.forEach(clearTimeout);
+    setStep(1);
+    timers = [setTimeout(() => setStep(2), 1800), setTimeout(() => setStep(3), 3800)];
+  }
+  buttons.forEach(b => b.addEventListener('click', () => { timers.forEach(clearTimeout); setStep(Number(b.dataset.go)); }));
+  story.querySelector('.map-replay').addEventListener('click', play);
   if (reduce || !('IntersectionObserver' in window)) { setStep(3); return; }
-  setStep(0);
+  setStep(1);
   const io = new IntersectionObserver(entries => {
-    if (!entries.some(e => e.isIntersecting)) return;
-    io.disconnect();
-    setTimeout(() => setStep(1), 200);
-    setTimeout(() => setStep(2), 1400);
-    setTimeout(() => setStep(3), 3200);
-  }, { threshold: .4 });
-  io.observe(story);
-  steps.forEach((li, i) => { li.tabIndex = 0; li.setAttribute('role', 'button'); const go = () => setStep(i + 1); li.addEventListener('click', go); li.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } }); });
+    if (entries.some(e => e.isIntersecting)) { io.disconnect(); play(); }
+  }, { threshold: .45 });
+  io.observe(story.querySelector('.map-story__figure'));
 })();
