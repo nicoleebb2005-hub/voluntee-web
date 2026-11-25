@@ -5,9 +5,9 @@
   const buttons = story.querySelectorAll('.map-steps button');
   const caption = story.querySelector('.map-story__caption');
   const texts = {
-    1: 'Os três distritos da região: São Mateus, São Rafael e Iguatemi.',
-    2: 'O limite da região vira uma linha laranja.',
-    3: 'Na parte de baixo, a linha se abre e forma o V do Voluntee.'
+    1: 'A região de São Mateus tem três distritos: São Mateus, São Rafael e Iguatemi.',
+    2: 'O logo usa só o contorno do distrito de São Mateus.',
+    3: 'O contorno vira o desenho do logo, e a ponta de baixo forma o V do Voluntee.'
   };
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   let timers = [];
@@ -19,7 +19,7 @@
   function play() {
     timers.forEach(clearTimeout);
     setStep(1);
-    timers = [setTimeout(() => setStep(2), 1800), setTimeout(() => setStep(3), 3800)];
+    timers = [setTimeout(() => setStep(2), 4500), setTimeout(() => setStep(3), 9500)];
   }
   buttons.forEach(b => b.addEventListener('click', () => { timers.forEach(clearTimeout); setStep(Number(b.dataset.go)); }));
   story.querySelector('.map-replay').addEventListener('click', play);

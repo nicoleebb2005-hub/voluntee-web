@@ -96,27 +96,26 @@ html{overflow-x:clip}body{overflow-x:clip}
 .map-replay{background:none;border:0;padding:8px 0;min-height:44px;color:#F5EBDD;font:600 .95rem 'Work Sans',sans-serif;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
 .map-story__figure{margin:0;background:rgba(255,255,255,.04);border-radius:18px 8px 16px 10px;padding:24px}
 .map-svg{display:block;width:100%;height:auto}
-.map-stage{transform-box:view-box;transform-origin:0 0;transition:transform 1s ease-in-out}
-.map-base{fill:rgba(255,255,255,.06);transition:opacity .6s}
-.district path{fill:#F5EBDD;stroke:#2C3E50;stroke-width:3;transition:opacity .6s}
-.district:nth-of-type(2) path{fill:#EAD8C2}.district:nth-of-type(3) path{fill:#E0CAAF}
-.district text{font:700 17px 'Work Sans',sans-serif;fill:#2C3E50;transition:opacity .5s}
-.map-outline{fill:none;stroke:#C1440E;stroke-width:6;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0;transition:stroke-dashoffset 1.4s ease-in-out,opacity .6s}
-.map-logo{opacity:0;transition:opacity .8s .5s}
-.map-story__caption{font-size:.95rem;color:#F5EBDD;margin-top:16px;min-height:1.6em}
-/* etapa 1: território */
-.map-story[data-step="1"] .map-outline{stroke-dashoffset:0}
-/* etapa 2: só o contorno */
-.map-story[data-step="2"] .district,.map-story[data-step="3"] .district{opacity:0}
-.map-story .district{transition:opacity .6s}
-/* etapa 3: o mapa encolhe e vira o logo */
-.map-story[data-step="3"] .map-stage{transform:translate(13px,80px) scale(.5)}
-.map-story[data-step="3"] .map-base{opacity:0}
-.map-story[data-step="3"] .map-outline{opacity:0;transition:opacity .6s .9s}
-.map-story[data-step="3"] .map-logo{opacity:1}
+.map-region{fill:rgba(255,255,255,.05);stroke:rgba(245,235,221,.5);stroke-width:2;transition:opacity 1.2s ease}
+.district path{stroke:#2C3E50;stroke-width:3;transition:fill 1.2s ease,stroke 1.2s ease,stroke-width 1.2s ease,opacity 1.2s ease}
+.district--other path{fill:#5B6B7A}
+.district--other text{fill:#F5EBDD;font:600 15px 'Work Sans',sans-serif;transition:opacity 1s ease}
+.district--sm .sm-shape{fill:#F5EBDD;stroke:#C1440E;stroke-width:5}
+.district--sm text{fill:#2C3E50;font:700 17px 'Work Sans',sans-serif;transition:opacity 1s ease}
+.sm-move{transform-box:view-box;transform-origin:0 0;transition:transform 1.4s cubic-bezier(.4,0,.2,1),opacity 1.2s ease}
+.map-logo{opacity:0;transition:opacity 1.4s ease}
+.map-story__caption{font-size:1rem;color:#F5EBDD;margin-top:16px;min-height:3.2em;transition:opacity .4s}
+/* 2: só o distrito, ampliado e centralizado */
+.map-story[data-step="2"] .district--other,.map-story[data-step="3"] .district--other,.map-story[data-step="2"] .map-region,.map-story[data-step="3"] .map-region{opacity:0}
+.map-story[data-step="2"] .sm-move{transform:translate(90px,8px) scale(1.4)}
+.map-story[data-step="2"] .sm-shape{fill:transparent;stroke-width:4}
+.map-story[data-step="2"] .district--sm text{opacity:0}
+/* 3: o distrito dá lugar ao logo */
+.map-story[data-step="3"] .sm-move{transform:translate(20px,95px) scale(.85);opacity:0}
+.map-story[data-step="3"] .map-logo{opacity:1;transition-delay:.4s}
 @media(max-width:900px){.map-story__grid{grid-template-columns:1fr;gap:32px}}
 @media(max-width:600px){.map-story__figure{padding:16px}.district text{font-size:24px}}
-@media(prefers-reduced-motion:reduce){.map-stage,.map-outline,.district,.map-logo{transition:none!important}}
+@media(prefers-reduced-motion:reduce){.sm-move,.district path,.map-region,.map-logo{transition:none!important}}
 
 /* ===== Só o que é clicável parece clicável ===== */
 /* etiquetas viram rótulos de texto, sem formato de botão */
