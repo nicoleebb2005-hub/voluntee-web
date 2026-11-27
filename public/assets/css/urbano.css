@@ -38,7 +38,7 @@ main>section+section{z-index:auto}
 .street-sign--small{font-size:.72rem;padding:4px 10px;margin-bottom:10px}
 /* faixa de mutirão */
 .neighborhood-strip{background:#C1440E;color:#FFFFFF;overflow:hidden;transform:rotate(-1.2deg) scale(1.02);margin:-8px 0;position:relative;z-index:3;box-shadow:0 6px 20px rgba(44,62,80,.2)}
-.neighborhood-strip__track{display:flex;gap:40px;white-space:nowrap;padding:14px 24px;font:700 1rem Quicksand,sans-serif;width:max-content;animation:strip 40s linear infinite}
+.neighborhood-strip__track{display:flex;gap:40px;white-space:nowrap;padding:14px 24px;font:700 1rem Quicksand,sans-serif;width:max-content;animation:strip 18s linear infinite}
 .neighborhood-strip__track span::after{content:'✦';margin-left:40px;color:#F5EBDD}
 @keyframes strip{to{transform:translateX(-50%)}}
 .neighborhood-strip:hover .neighborhood-strip__track{animation-play-state:paused}
@@ -161,3 +161,7 @@ html{overflow-x:clip}body{overflow-x:clip}
 @media(max-width:600px){.info-card{padding:24px 20px}.info-card .card-photo{margin:-24px -20px 20px}.info-grid,.activity-grid{gap:24px}}
 .card-photo-cover .photo-open img[src*="oleo-reciclagem"]{object-position:40% 88%}
 .info-card .card-photo-cover .photo-open img{aspect-ratio:4/3;height:auto;object-fit:cover;object-position:center}
+.home-hero>img{transform:none;object-position:center 62%}
+@media(max-width:760px){.home-hero>img{object-position:72% 50%}}
+.photo-credit{display:block;margin-top:6px;font-size:.8rem;opacity:.8}
+.photo-credit a{color:inherit;text-decoration:underline}
